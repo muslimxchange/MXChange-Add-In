@@ -1,0 +1,59 @@
+{
+    "allowCustomDataForDataTypeAny": true,
+    "functions": [
+        {
+            "description": "Excel custom function: Checks if a ticker is compliant via WordPress API.",
+            "id": "COMPLIANT",
+            "name": "COMPLIANT",
+            "parameters": [
+                {
+                    "name": "ticker",
+                    "type": "string"
+                }
+            ],
+            "result": {
+                "type": "string"
+            }
+        },
+        {
+            "description": "Fetches data for a ticker with specific fields.",
+            "id": "TICKER",
+            "name": "TICKER",
+            "parameters": [
+                {
+                    "name": "ticker",
+                    "type": "string"
+                },
+                {
+                    "name": "fields",
+                    "optional": true,
+                    "repeating": true,
+                    "type": "string"
+                }
+            ],
+            "result": {
+                "dimensionality": "matrix"
+            }
+        },
+        {
+            "description": "Fetches data for a ISIN with specific fields.",
+            "id": "ISIN",
+            "name": "ISIN",
+            "parameters": [
+                {
+                    "name": "ISIN",
+                    "type": "any"
+                },
+                {
+                    "name": "fields",
+                    "optional": true,
+                    "repeating": true,
+                    "type": "string"
+                }
+            ],
+            "result": {
+                "dimensionality": "matrix"
+            }
+        }
+    ]
+}
