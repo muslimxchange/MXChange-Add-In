@@ -6,8 +6,8 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="MXChange"/>
   <Description DefaultValue="Write your own Excel functions in JavaScript."/>
-  <IconUrl DefaultValue="https://muslimxchange.github.io/MXChange-Add-In/assets/logo.png"/>
-  <HighResolutionIconUrl DefaultValue="https://muslimxchange.github.io/MXChange-Add-In/assets/logo.png"/>
+  <IconUrl DefaultValue="https://muslimxchange.github.io/MXChange-Add-In/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://muslimxchange.github.io/MXChange-Add-In/assets/icon-64.png"/>
   <SupportUrl DefaultValue="https://muslimxchange.com/contact/"/>
   <AppDomains>
     <AppDomain>https://muslimxchange.com</AppDomain>
@@ -81,9 +81,9 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://muslimxchange.github.io/MXChange-Add-In/assets/logo.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://muslimxchange.github.io/MXChange-Add-In/assets/logo.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://muslimxchange.github.io/MXChange-Add-In/assets/logo.png"/>
+        <bt:Image id="Icon.16x16" DefaultValue="https://muslimxchange.github.io/MXChange-Add-In/assets/icon-16.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://muslimxchange.github.io/MXChange-Add-In/assets/icon-32.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://muslimxchange.github.io/MXChange-Add-In/assets/icon-80.png"/>
       </bt:Images>
       <bt:Urls>
         <bt:Url id="Functions.Script.Url" DefaultValue="https://muslimxchange.github.io/MXChange-Add-In/functions.js"/>
