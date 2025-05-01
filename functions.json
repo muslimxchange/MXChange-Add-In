@@ -3,6 +3,7 @@
     "functions": [
         {
             "description": "Excel custom function: Checks if a ticker is compliant via WordPress API.",
+            "helpUrl": "https://muslimxchange.com/excel-addin/",
             "id": "TICKER",
             "name": "TICKER",
             "parameters": [
@@ -23,6 +24,7 @@
         },
         {
             "description": "Fetches data for a ISIN with specific fields.",
+            "helpUrl": "https://muslimxchange.com/excel-addin/",
             "id": "ISIN",
             "name": "ISIN",
             "parameters": [
