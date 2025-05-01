@@ -2,7 +2,7 @@
     "allowCustomDataForDataTypeAny": true,
     "functions": [
         {
-            "description": "Excel custom function: Checks if a ticker is compliant via WordPress API.",
+            "description": "Fetch Shariah compliance data using a stock ticker symbol.",
             "helpUrl": "https://muslimxchange.com/excel-addin/",
             "id": "TICKER",
             "name": "TICKER",
@@ -23,7 +23,7 @@
             }
         },
         {
-            "description": "Fetches data for a ISIN with specific fields.",
+            "description": "Fetch Shariah compliance data using an ISIN (International Securities Identification Number).",
             "helpUrl": "https://muslimxchange.com/excel-addin/",
             "id": "ISIN",
             "name": "ISIN",
