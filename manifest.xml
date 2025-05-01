@@ -105,7 +105,4 @@
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
-
-  <SupportUrl DefaultValue="https://muslimxchange.com/excel-addin/"/>
-
 </OfficeApp>
