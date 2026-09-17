@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
   <Id>ec01ca60-6b41-4cfa-826f-9edd736be5f3</Id>
-  <Version>1.0.0.0</Version>
+  <Version>1.3.3.0</Version>
   <ProviderName>Muslim Xchange</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="MXChange"/>
-  <Description DefaultValue="Write your own Excel functions in JavaScript."/>
+  <Description DefaultValue="Shariah compliance, purification and zakat data for stocks and ETFs, as Excel formulas: MX.TICKER, MX.ISIN and MX.FIELDS."/>
   <IconUrl DefaultValue="https://muslimxchange.github.io/MXChange-Add-In/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://muslimxchange.github.io/MXChange-Add-In/assets/icon-64.png"/>
   <SupportUrl DefaultValue="https://muslimxchange.com/contact/"/>
@@ -89,19 +89,19 @@
         <bt:Url id="Functions.Script.Url" DefaultValue="https://muslimxchange.github.io/MXChange-Add-In/functions.js"/>
         <bt:Url id="Functions.Metadata.Url" DefaultValue="https://muslimxchange.github.io/MXChange-Add-In/functions.json"/>
         <bt:Url id="Functions.Page.Url" DefaultValue="https://muslimxchange.github.io/MXChange-Add-In/functions.html"/>
-        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812"/>
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://muslimxchange.com/excel-addin/"/>
         <bt:Url id="Commands.Url" DefaultValue="https://muslimxchange.github.io/MXChange-Add-In/commands.html"/>
         <bt:Url id="Taskpane.Url" DefaultValue="https://muslimxchange.github.io/MXChange-Add-In/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="Functions.Namespace" DefaultValue="MX"/>
-        <bt:String id="GetStarted.Title" DefaultValue="Get started with your sample add-in!"/>
-        <bt:String id="CommandsGroup.Label" DefaultValue="Commands Group"/>
+        <bt:String id="GetStarted.Title" DefaultValue="MXChange is ready"/>
+        <bt:String id="CommandsGroup.Label" DefaultValue="Muslim Xchange"/>
         <bt:String id="TaskpaneButton.Label" DefaultValue="MXChange"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="GetStarted.Description" DefaultValue="Your sample add-in loaded successfully. Go to the HOME tab and click the 'Show Task Pane' button to get started."/>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to Show a Task Pane"/>
+        <bt:String id="GetStarted.Description" DefaultValue="Open the MXChange pane from the Home tab, sign in with your username and an application password, then type =MX.TICKER(&quot;AAPL&quot;) in any cell."/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Sign in and see the available fields and formulas"/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>

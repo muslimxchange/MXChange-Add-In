@@ -1,3 +1,147 @@
-/*! For license information please see taskpane.js.LICENSE.txt */
-!function(){var t={42695:function(t,e,r){"use strict";t.exports=r.p+"assets/logo.png"},58394:function(t,e,r){"use strict";t.exports=r.p+"36640f9436c8282d8333.css"}},e={};function r(n){var o=e[n];if(void 0!==o)return o.exports;var i=e[n]={exports:{}};return t[n](i,i.exports,r),i.exports}r.m=t,r.g=function(){if("object"==typeof globalThis)return globalThis;try{return this||new Function("return this")()}catch(t){if("object"==typeof window)return window}}(),r.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},function(){var t;r.g.importScripts&&(t=r.g.location+"");var e=r.g.document;if(!t&&e&&(e.currentScript&&"SCRIPT"===e.currentScript.tagName.toUpperCase()&&(t=e.currentScript.src),!t)){var n=e.getElementsByTagName("script");if(n.length)for(var o=n.length-1;o>-1&&(!t||!/^http(s?):/.test(t));)t=n[o--].src}if(!t)throw new Error("Automatic publicPath is not supported in this browser");t=t.replace(/^blob:/,"").replace(/#.*$/,"").replace(/\?.*$/,"").replace(/\/[^\/]+$/,"/"),r.p=t}(),r.b=document.baseURI||self.location.href,function(){function t(e){return t="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},t(e)}function e(){"use strict";e=function(){return n};var r,n={},o=Object.prototype,i=o.hasOwnProperty,a=Object.defineProperty||function(t,e,r){t[e]=r.value},c="function"==typeof Symbol?Symbol:{},u=c.iterator||"@@iterator",s=c.asyncIterator||"@@asyncIterator",l=c.toStringTag||"@@toStringTag";function f(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{f({},"")}catch(r){f=function(t,e,r){return t[e]=r}}function p(t,e,r,n){var o=e&&e.prototype instanceof w?e:w,i=Object.create(o.prototype),c=new P(n||[]);return a(i,"_invoke",{value:S(t,r,c)}),i}function h(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}n.wrap=p;var y="suspendedStart",d="suspendedYield",g="executing",m="completed",v={};function w(){}function b(){}function x(){}var E={};f(E,u,(function(){return this}));var L=Object.getPrototypeOf,k=L&&L(L(N([])));k&&k!==o&&i.call(k,u)&&(E=k);var I=x.prototype=w.prototype=Object.create(E);function O(t){["next","throw","return"].forEach((function(e){f(t,e,(function(t){return this._invoke(e,t)}))}))}function j(e,r){function n(o,a,c,u){var s=h(e[o],e,a);if("throw"!==s.type){var l=s.arg,f=l.value;return f&&"object"==t(f)&&i.call(f,"__await")?r.resolve(f.__await).then((function(t){n("next",t,c,u)}),(function(t){n("throw",t,c,u)})):r.resolve(f).then((function(t){l.value=t,c(l)}),(function(t){return n("throw",t,c,u)}))}u(s.arg)}var o;a(this,"_invoke",{value:function(t,e){function i(){return new r((function(r,o){n(t,e,r,o)}))}return o=o?o.then(i,i):i()}})}function S(t,e,n){var o=y;return function(i,a){if(o===g)throw Error("Generator is already running");if(o===m){if("throw"===i)throw a;return{value:r,done:!0}}for(n.method=i,n.arg=a;;){var c=n.delegate;if(c){var u=T(c,n);if(u){if(u===v)continue;return u}}if("next"===n.method)n.sent=n._sent=n.arg;else if("throw"===n.method){if(o===y)throw o=m,n.arg;n.dispatchException(n.arg)}else"return"===n.method&&n.abrupt("return",n.arg);o=g;var s=h(t,e,n);if("normal"===s.type){if(o=n.done?m:d,s.arg===v)continue;return{value:s.arg,done:n.done}}"throw"===s.type&&(o=m,n.method="throw",n.arg=s.arg)}}}function T(t,e){var n=e.method,o=t.iterator[n];if(o===r)return e.delegate=null,"throw"===n&&t.iterator.return&&(e.method="return",e.arg=r,T(t,e),"throw"===e.method)||"return"!==n&&(e.method="throw",e.arg=new TypeError("The iterator does not provide a '"+n+"' method")),v;var i=h(o,t.iterator,e.arg);if("throw"===i.type)return e.method="throw",e.arg=i.arg,e.delegate=null,v;var a=i.arg;return a?a.done?(e[t.resultName]=a.value,e.next=t.nextLoc,"return"!==e.method&&(e.method="next",e.arg=r),e.delegate=null,v):a:(e.method="throw",e.arg=new TypeError("iterator result is not an object"),e.delegate=null,v)}function B(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function _(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function P(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(B,this),this.reset(!0)}function N(e){if(e||""===e){var n=e[u];if(n)return n.call(e);if("function"==typeof e.next)return e;if(!isNaN(e.length)){var o=-1,a=function t(){for(;++o<e.length;)if(i.call(e,o))return t.value=e[o],t.done=!1,t;return t.value=r,t.done=!0,t};return a.next=a}}throw new TypeError(t(e)+" is not iterable")}return b.prototype=x,a(I,"constructor",{value:x,configurable:!0}),a(x,"constructor",{value:b,configurable:!0}),b.displayName=f(x,l,"GeneratorFunction"),n.isGeneratorFunction=function(t){var e="function"==typeof t&&t.constructor;return!!e&&(e===b||"GeneratorFunction"===(e.displayName||e.name))},n.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,x):(t.__proto__=x,f(t,l,"GeneratorFunction")),t.prototype=Object.create(I),t},n.awrap=function(t){return{__await:t}},O(j.prototype),f(j.prototype,s,(function(){return this})),n.AsyncIterator=j,n.async=function(t,e,r,o,i){void 0===i&&(i=Promise);var a=new j(p(t,e,r,o),i);return n.isGeneratorFunction(e)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},O(I),f(I,l,"Generator"),f(I,u,(function(){return this})),f(I,"toString",(function(){return"[object Generator]"})),n.keys=function(t){var e=Object(t),r=[];for(var n in e)r.push(n);return r.reverse(),function t(){for(;r.length;){var n=r.pop();if(n in e)return t.value=n,t.done=!1,t}return t.done=!0,t}},n.values=N,P.prototype={constructor:P,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=r,this.done=!1,this.delegate=null,this.method="next",this.arg=r,this.tryEntries.forEach(_),!t)for(var e in this)"t"===e.charAt(0)&&i.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=r)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var e=this;function n(n,o){return c.type="throw",c.arg=t,e.next=n,o&&(e.method="next",e.arg=r),!!o}for(var o=this.tryEntries.length-1;o>=0;--o){var a=this.tryEntries[o],c=a.completion;if("root"===a.tryLoc)return n("end");if(a.tryLoc<=this.prev){var u=i.call(a,"catchLoc"),s=i.call(a,"finallyLoc");if(u&&s){if(this.prev<a.catchLoc)return n(a.catchLoc,!0);if(this.prev<a.finallyLoc)return n(a.finallyLoc)}else if(u){if(this.prev<a.catchLoc)return n(a.catchLoc,!0)}else{if(!s)throw Error("try statement without catch or finally");if(this.prev<a.finallyLoc)return n(a.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;r>=0;--r){var n=this.tryEntries[r];if(n.tryLoc<=this.prev&&i.call(n,"finallyLoc")&&this.prev<n.finallyLoc){var o=n;break}}o&&("break"===t||"continue"===t)&&o.tryLoc<=e&&e<=o.finallyLoc&&(o=null);var a=o?o.completion:{};return a.type=t,a.arg=e,o?(this.method="next",this.next=o.finallyLoc,v):this.complete(a)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),v},finish:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),_(r),v}},catch:function(t){for(var e=this.tryEntries.length-1;e>=0;--e){var r=this.tryEntries[e];if(r.tryLoc===t){var n=r.completion;if("throw"===n.type){var o=n.arg;_(r)}return o}}throw Error("illegal catch attempt")},delegateYield:function(t,e,n){return this.delegate={iterator:N(t),resultName:e,nextLoc:n},"next"===this.method&&(this.arg=r),v}},n}function r(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function n(t){return function(){var e=this,n=arguments;return new Promise((function(o,i){var a=t.apply(e,n);function c(t){r(a,o,i,c,u,"next",t)}function u(t){r(a,o,i,c,u,"throw",t)}c(void 0)}))}}Office.onReady((function(){document.getElementById("sideload-msg").style.display="none",document.getElementById("app-body").style.display="flex",document.getElementById("login-btn").addEventListener("click",p),document.getElementById("logout-btn").addEventListener("click",y),function(){f.apply(this,arguments)}()}));var o="https://mxchange-node-p12a3.kinsta.app/api";function i(t){return a.apply(this,arguments)}function a(){return(a=n(e().mark((function t(r){return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,OfficeRuntime.storage.setItem("jwt",r);case 2:case"end":return t.stop()}}),t)})))).apply(this,arguments)}function c(){return u.apply(this,arguments)}function u(){return(u=n(e().mark((function t(){return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,OfficeRuntime.storage.getItem("jwt");case 2:return t.abrupt("return",t.sent);case 3:case"end":return t.stop()}}),t)})))).apply(this,arguments)}function s(){return l.apply(this,arguments)}function l(){return(l=n(e().mark((function t(){return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,OfficeRuntime.storage.removeItem("jwt");case 2:case"end":return t.stop()}}),t)})))).apply(this,arguments)}function f(){return(f=n(e().mark((function t(){var r,n,i,a,u,s;return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,c();case 2:if(r=t.sent,n=document.getElementById("login-section"),i=document.getElementById("login-status"),a=document.getElementById("logout-btn"),!r){t.next=23;break}return t.prev=7,t.next=10,fetch("".concat(o,"/secure-hello"),{headers:{Authorization:"Bearer ".concat(r)}});case 10:if(!(u=t.sent).ok){t.next=18;break}return t.next=14,u.json();case 14:s=t.sent,n.style.display="none",i.innerText="✅ Logged in as ".concat(s.user.name),a.style.display="inline-block";case 18:t.next=23;break;case 20:t.prev=20,t.t0=t.catch(7),console.error("Error checking login status",t.t0);case 23:case"end":return t.stop()}}),t,null,[[7,20]])})))).apply(this,arguments)}function p(){return h.apply(this,arguments)}function h(){return(h=n(e().mark((function t(){var r,n,a,c,u,s,l,f,p;return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return r=document.getElementById("username").value.trim(),n=document.getElementById("password").value,a=document.getElementById("login-status"),c=document.getElementById("login-section"),u=document.getElementById("logout-btn"),a.innerText="🔄 Logging in...",t.prev=6,t.next=9,fetch("".concat(o,"/auth/login"),{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({username:r,password:n})});case 9:return s=t.sent,t.next=12,s.json();case 12:if(l=t.sent,s.ok){t.next=17;break}return console.error("Login failed:",l),a.innerText="❌ ".concat(l.message||"Login failed."),t.abrupt("return");case 17:return f=l.token,p=l.user,t.next=20,i(f);case 20:c.style.display="none",a.innerText="✅ Logged in as ".concat(p.name),u.style.display="inline-block",t.next=29;break;case 25:t.prev=25,t.t0=t.catch(6),console.error("Login error:",t.t0),a.innerText="❌ Network or CORS error during login.";case 29:case"end":return t.stop()}}),t,null,[[6,25]])})))).apply(this,arguments)}function y(){return d.apply(this,arguments)}function d(){return(d=n(e().mark((function t(){return e().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,s();case 2:document.getElementById("login-section").style.display="block",document.getElementById("logout-btn").style.display="none",document.getElementById("login-status").innerText="Logged out.";case 5:case"end":return t.stop()}}),t)})))).apply(this,arguments)}}(),function(){"use strict";new URL(r(58394),r.b),new URL(r(42695),r.b)}()}();
-//# sourceMappingURL=taskpane.js.map
+/* MXChange task pane — Version 1.3.3. Credentials are committed as one session record.
+ * Restore never writes credentials; stale responses cannot undo sign-out or account changes.
+ */
+/* global Office, Excel, OfficeRuntime, document */
+(function () {
+  "use strict";
+  const API_BASE = "https://muslimxchange.com/wp-json/mx-api/v1";
+  const STORAGE_SESSION = "mx_session_v2", STORAGE_BATCH = "mx_batch_max";
+  const LEGACY_KEYS = ["mx_auth", "mx_name", "mx_tier"];
+  let generation = 0, mutations = Promise.resolve();
+  const $ = function (id) { return document.getElementById(id); };
+  Office.onReady(function () {
+    $("sign-in").addEventListener("click", signIn);
+    $("sign-out").addEventListener("click", signOut);
+    $("recalc").addEventListener("click", recalc);
+    $("key").addEventListener("keydown", function (e) { if (e.key === "Enter" && !$("sign-in").disabled) signIn(); });
+    restore();
+  });
+  function show(state) { $("form").hidden = state !== "out"; $("session").hidden = state !== "in"; }
+  function note(text, kind) { $("note").textContent = text || ""; $("note").className = "note" + (kind ? " note-" + kind : ""); }
+  function sessionId() { return Date.now().toString(36) + ":" + Math.random().toString(36).slice(2) + ":" + generation; }
+  function mutate(fn) {
+    const next = mutations.then(fn, fn);
+    mutations = next.catch(function () {});
+    return next;
+  }
+  async function readSession() {
+    try {
+      const raw = await OfficeRuntime.storage.getItem(STORAGE_SESSION);
+      if (raw !== null && raw !== undefined) {
+        const session = JSON.parse(raw);
+        return session && session.id && session.auth ? session : null;
+      }
+      const auth = await OfficeRuntime.storage.getItem("mx_auth");
+      return auth ? {id: "legacy:" + auth, auth: auth, name: (await OfficeRuntime.storage.getItem("mx_name")) || ""} : null;
+    } catch (e) { return null; }
+  }
+  async function current(op, session) {
+    if (op !== generation) return false;
+    const now = await readSession();
+    return op === generation && !!(now && now.id === session.id && now.auth === session.auth);
+  }
+  async function restore() {
+    const op = generation, session = await readSession();
+    if (op !== generation) return;
+    if (!session) { show("out"); return; }
+    const me = await fetchMe(session.auth);
+    if (!(await current(op, session))) return;
+    if (me.ok) {
+      // Deliberately read-only: an old response never rewrites saved auth or batch settings.
+      showSession(me.data);
+    } else if (me.status === 401 || me.status === 403) {
+      show("in"); $("who").textContent = session.name || "";
+      $("tier").textContent = me.message || "Your saved API key was rejected. Sign out and sign in again.";
+      note("Sign out to remove this key, then sign in with an active key.", "error");
+    } else {
+      show("in"); $("who").textContent = session.name || "";
+      $("tier").textContent = me.message || "Could not reach the API. Recalculate when connected.";
+    }
+  }
+  async function signIn() {
+    if ($("sign-in").disabled) return;
+    const username = $("username").value.trim(), key = $("key").value.trim();
+    if (!username || !key) { note("Enter your username and API key.", "error"); return; }
+    const op = ++generation;
+    let auth;
+    try { auth = "Basic " + btoa(unescape(encodeURIComponent(username + ":" + key))); }
+    catch (e) { note("The username or key could not be encoded.", "error"); return; }
+    note("Signing in…"); $("sign-in").disabled = true;
+    const me = await fetchMe(auth);
+    if (op !== generation) return;
+    $("sign-in").disabled = false;
+    if (!me.ok) { note(me.status === 401 ? "Invalid username or API key." : me.message, "error"); return; }
+    const stored = await mutate(async function () {
+      if (op !== generation) return false;
+      const max = me.data.limits && me.data.limits.batch_max;
+      const session = {id: sessionId(), auth: auth, name: (me.data.user && me.data.user.name) || "", tier: me.data.tier, batch: max > 0 ? max : 1000}; // server 0 = no cap; 1,000 per request keeps responses quick
+      try {
+        for (const k of LEGACY_KEYS) await OfficeRuntime.storage.removeItem(k);
+        await OfficeRuntime.storage.setItem(STORAGE_BATCH, String(session.batch));
+        if (op !== generation) return false;
+        await OfficeRuntime.storage.setItem(STORAGE_SESSION, JSON.stringify(session));
+        return await current(op, session);
+      } catch (e) { return false; }
+    });
+    if (op !== generation) return;
+    if (!stored) { note("Excel could not save the key. Check add-in storage and try again.", "error"); return; }
+    $("key").value = ""; showSession(me.data); recalc();
+  }
+  async function signOut() {
+    const op = ++generation;
+    $("sign-in").disabled = false;
+    const removed = await mutate(async function () {
+      const tombstone = {id: sessionId(), auth: null};
+      let ok = true;
+      try { await OfficeRuntime.storage.setItem(STORAGE_SESSION, JSON.stringify(tombstone)); }
+      catch (e) { ok = false; }
+      for (const k of LEGACY_KEYS.concat([STORAGE_BATCH])) {
+        try { await OfficeRuntime.storage.removeItem(k); } catch (e) { ok = false; }
+      }
+      try {
+        const raw = await OfficeRuntime.storage.getItem(STORAGE_SESSION);
+        return ok && raw === JSON.stringify(tombstone) && !(await OfficeRuntime.storage.getItem("mx_auth"));
+      } catch (e) { return false; }
+    });
+    if (op !== generation) return;
+    if (!removed) { note("Could not remove all saved credentials. Revoke the key on the API keys page, then restart Excel.", "error"); return; }
+    show("out"); $("key").value = "";
+    await recalc();
+    if (op === generation) note("Signed out. MX formulas require sign-in to refresh.");
+  }
+  function showSession(me) {
+    show("in"); $("who").textContent = me.user && me.user.name ? me.user.name : "";
+    const t = me.tier;
+    $("tier").className = "tier" + (t === "none" ? " tier-none" : "");
+    const scope = me.fields === "full" ? "all fields" : "basic fields";
+    const quota = me.limits && me.limits.lookup_quota_per_day;
+    $("tier").textContent = t === "none" ? "Your membership does not include API lookups. Upgrade on muslimxchange.com."
+      : t === "trial" ? "Free trial — " + (quota || 1) + " lookup" + ((quota || 1) === 1 ? "" : "s") + " per day of the basic fields. Upgrade on muslimxchange.com for full access."
+      : t === "bulk" ? "Lookups and bulk export enabled (" + scope + ")." : "Lookups enabled — MX.TICKER, MX.ISIN and MX.FIELDS (" + scope + ").";
+    note("");
+  }
+  async function fetchMe(auth) {
+    const ctrl = typeof AbortController === "undefined" ? null : new AbortController();
+    let deadline;
+    const timeout = new Promise(function (_, reject) {
+      deadline = setTimeout(function () {
+        const error = new Error("Sign-in request timed out. Try again.");
+        reject(error); if (ctrl) ctrl.abort();
+      }, 20000);
+    });
+    try {
+      return await Promise.race([(async function () {
+        const res = await fetch(API_BASE + "/me", Object.assign({headers: {Authorization: auth}}, ctrl ? {signal: ctrl.signal} : {}));
+        const data = await res.json();
+        const valid = data && typeof data === "object" && data.user && typeof data.tier === "string";
+        return {ok: res.ok && !!valid, status: res.status, data: data, message: (data && data.message) || "Invalid API response. Try again."};
+      })(), timeout]);
+    } catch (e) { return {ok: false, status: 0, data: null, message: e.message || "Network error. Try again."}; }
+    finally { clearTimeout(deadline); }
+  }
+  async function recalc() {
+    try {
+      await Excel.run(async function (ctx) { ctx.workbook.application.calculate(Excel.CalculationType.full); await ctx.sync(); });
+    } catch (e) { note("Press Ctrl+Alt+F9 to recalculate."); }
+  }
+})();

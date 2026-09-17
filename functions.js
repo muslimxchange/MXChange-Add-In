@@ -1,3 +1,200 @@
-/*! For license information please see functions.js.LICENSE.txt */
-!function(){function t(r){return t="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t},t(r)}function r(){"use strict";r=function(){return n};var e,n={},o=Object.prototype,i=o.hasOwnProperty,a=Object.defineProperty||function(t,r,e){t[r]=e.value},c="function"==typeof Symbol?Symbol:{},u=c.iterator||"@@iterator",s=c.asyncIterator||"@@asyncIterator",f=c.toStringTag||"@@toStringTag";function l(t,r,e){return Object.defineProperty(t,r,{value:e,enumerable:!0,configurable:!0,writable:!0}),t[r]}try{l({},"")}catch(e){l=function(t,r,e){return t[r]=e}}function h(t,r,e,n){var o=r&&r.prototype instanceof w?r:w,i=Object.create(o.prototype),c=new C(n||[]);return a(i,"_invoke",{value:_(t,e,c)}),i}function p(t,r,e){try{return{type:"normal",arg:t.call(r,e)}}catch(t){return{type:"throw",arg:t}}}n.wrap=h;var y="suspendedStart",v="suspendedYield",d="executing",g="completed",m={};function w(){}function b(){}function x(){}var L={};l(L,u,(function(){return this}));var E=Object.getPrototypeOf,k=E&&E(E(F([])));k&&k!==o&&i.call(k,u)&&(L=k);var j=x.prototype=w.prototype=Object.create(L);function I(t){["next","throw","return"].forEach((function(r){l(t,r,(function(t){return this._invoke(r,t)}))}))}function O(r,e){function n(o,a,c,u){var s=p(r[o],r,a);if("throw"!==s.type){var f=s.arg,l=f.value;return l&&"object"==t(l)&&i.call(l,"__await")?e.resolve(l.__await).then((function(t){n("next",t,c,u)}),(function(t){n("throw",t,c,u)})):e.resolve(l).then((function(t){f.value=t,c(f)}),(function(t){return n("throw",t,c,u)}))}u(s.arg)}var o;a(this,"_invoke",{value:function(t,r){function i(){return new e((function(e,o){n(t,r,e,o)}))}return o=o?o.then(i,i):i()}})}function _(t,r,n){var o=y;return function(i,a){if(o===d)throw Error("Generator is already running");if(o===g){if("throw"===i)throw a;return{value:e,done:!0}}for(n.method=i,n.arg=a;;){var c=n.delegate;if(c){var u=S(c,n);if(u){if(u===m)continue;return u}}if("next"===n.method)n.sent=n._sent=n.arg;else if("throw"===n.method){if(o===y)throw o=g,n.arg;n.dispatchException(n.arg)}else"return"===n.method&&n.abrupt("return",n.arg);o=d;var s=p(t,r,n);if("normal"===s.type){if(o=n.done?g:v,s.arg===m)continue;return{value:s.arg,done:n.done}}"throw"===s.type&&(o=g,n.method="throw",n.arg=s.arg)}}}function S(t,r){var n=r.method,o=t.iterator[n];if(o===e)return r.delegate=null,"throw"===n&&t.iterator.return&&(r.method="return",r.arg=e,S(t,r),"throw"===r.method)||"return"!==n&&(r.method="throw",r.arg=new TypeError("The iterator does not provide a '"+n+"' method")),m;var i=p(o,t.iterator,r.arg);if("throw"===i.type)return r.method="throw",r.arg=i.arg,r.delegate=null,m;var a=i.arg;return a?a.done?(r[t.resultName]=a.value,r.next=t.nextLoc,"return"!==r.method&&(r.method="next",r.arg=e),r.delegate=null,m):a:(r.method="throw",r.arg=new TypeError("iterator result is not an object"),r.delegate=null,m)}function P(t){var r={tryLoc:t[0]};1 in t&&(r.catchLoc=t[1]),2 in t&&(r.finallyLoc=t[2],r.afterLoc=t[3]),this.tryEntries.push(r)}function R(t){var r=t.completion||{};r.type="normal",delete r.arg,t.completion=r}function C(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(P,this),this.reset(!0)}function F(r){if(r||""===r){var n=r[u];if(n)return n.call(r);if("function"==typeof r.next)return r;if(!isNaN(r.length)){var o=-1,a=function t(){for(;++o<r.length;)if(i.call(r,o))return t.value=r[o],t.done=!1,t;return t.value=e,t.done=!0,t};return a.next=a}}throw new TypeError(t(r)+" is not iterable")}return b.prototype=x,a(j,"constructor",{value:x,configurable:!0}),a(x,"constructor",{value:b,configurable:!0}),b.displayName=l(x,f,"GeneratorFunction"),n.isGeneratorFunction=function(t){var r="function"==typeof t&&t.constructor;return!!r&&(r===b||"GeneratorFunction"===(r.displayName||r.name))},n.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,x):(t.__proto__=x,l(t,f,"GeneratorFunction")),t.prototype=Object.create(j),t},n.awrap=function(t){return{__await:t}},I(O.prototype),l(O.prototype,s,(function(){return this})),n.AsyncIterator=O,n.async=function(t,r,e,o,i){void 0===i&&(i=Promise);var a=new O(h(t,r,e,o),i);return n.isGeneratorFunction(r)?a:a.next().then((function(t){return t.done?t.value:a.next()}))},I(j),l(j,f,"Generator"),l(j,u,(function(){return this})),l(j,"toString",(function(){return"[object Generator]"})),n.keys=function(t){var r=Object(t),e=[];for(var n in r)e.push(n);return e.reverse(),function t(){for(;e.length;){var n=e.pop();if(n in r)return t.value=n,t.done=!1,t}return t.done=!0,t}},n.values=F,C.prototype={constructor:C,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=e,this.done=!1,this.delegate=null,this.method="next",this.arg=e,this.tryEntries.forEach(R),!t)for(var r in this)"t"===r.charAt(0)&&i.call(this,r)&&!isNaN(+r.slice(1))&&(this[r]=e)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var r=this;function n(n,o){return c.type="throw",c.arg=t,r.next=n,o&&(r.method="next",r.arg=e),!!o}for(var o=this.tryEntries.length-1;o>=0;--o){var a=this.tryEntries[o],c=a.completion;if("root"===a.tryLoc)return n("end");if(a.tryLoc<=this.prev){var u=i.call(a,"catchLoc"),s=i.call(a,"finallyLoc");if(u&&s){if(this.prev<a.catchLoc)return n(a.catchLoc,!0);if(this.prev<a.finallyLoc)return n(a.finallyLoc)}else if(u){if(this.prev<a.catchLoc)return n(a.catchLoc,!0)}else{if(!s)throw Error("try statement without catch or finally");if(this.prev<a.finallyLoc)return n(a.finallyLoc)}}}},abrupt:function(t,r){for(var e=this.tryEntries.length-1;e>=0;--e){var n=this.tryEntries[e];if(n.tryLoc<=this.prev&&i.call(n,"finallyLoc")&&this.prev<n.finallyLoc){var o=n;break}}o&&("break"===t||"continue"===t)&&o.tryLoc<=r&&r<=o.finallyLoc&&(o=null);var a=o?o.completion:{};return a.type=t,a.arg=r,o?(this.method="next",this.next=o.finallyLoc,m):this.complete(a)},complete:function(t,r){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&r&&(this.next=r),m},finish:function(t){for(var r=this.tryEntries.length-1;r>=0;--r){var e=this.tryEntries[r];if(e.finallyLoc===t)return this.complete(e.completion,e.afterLoc),R(e),m}},catch:function(t){for(var r=this.tryEntries.length-1;r>=0;--r){var e=this.tryEntries[r];if(e.tryLoc===t){var n=e.completion;if("throw"===n.type){var o=n.arg;R(e)}return o}}throw Error("illegal catch attempt")},delegateYield:function(t,r,n){return this.delegate={iterator:F(t),resultName:r,nextLoc:n},"next"===this.method&&(this.arg=e),m}},n}function e(t,r,e,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void e(t)}c.done?r(u):Promise.resolve(u).then(n,o)}function n(t){return function(){var r=this,n=arguments;return new Promise((function(o,i){var a=t.apply(r,n);function c(t){e(a,o,i,c,u,"next",t)}function u(t){e(a,o,i,c,u,"throw",t)}c(void 0)}))}}function o(){return o=n(r().mark((function t(e){var n,o,i,a,c,u,s,f,l,h,p,y,v,d,g=arguments;return r().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return n="https://mxchange-node-p12a3.kinsta.app/api",t.next=3,OfficeRuntime.storage.getItem("jwt");case 3:if(o=t.sent){t.next=6;break}return t.abrupt("return",[["Login required"]]);case 6:for(i=g.length,a=new Array(i>1?i-1:0),c=1;c<i;c++)a[c-1]=g[c];return u=a.flat().join(","),s="".concat(n,"/ticker-data?ticker=").concat(encodeURIComponent(e),"&fields=").concat(encodeURIComponent(u),"&token=").concat(encodeURIComponent(o||"")),t.prev=9,t.next=12,fetch(s);case 12:if((f=t.sent).ok){t.next=15;break}return t.abrupt("return",[["API Error ".concat(f.status)]]);case 15:return t.next=17,f.json();case 17:for(l=t.sent,h=[],p=a.flat(),y=0;y<p.length;y++)v=p[y],d=l[v],(y!==p.length-1||null!=d&&""!==d)&&h.push(null!=d?d:"Unknown");return t.abrupt("return",[h]);case 24:return t.prev=24,t.t0=t.catch(9),t.abrupt("return",[["Request Failed"]]);case 27:case"end":return t.stop()}}),t,null,[[9,24]])}))),o.apply(this,arguments)}function i(){return i=n(r().mark((function t(e){var n,o,i,a,c,u,s,f,l,h,p,y,v,d,g=arguments;return r().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return n="https://mxchange-node-p12a3.kinsta.app/api",t.next=3,OfficeRuntime.storage.getItem("jwt");case 3:if(o=t.sent){t.next=6;break}return t.abrupt("return",[["Login required"]]);case 6:for(i=g.length,a=new Array(i>1?i-1:0),c=1;c<i;c++)a[c-1]=g[c];return u=a.flat().join(","),s="".concat(n,"/isin-data?isin=").concat(encodeURIComponent(e),"&fields=").concat(encodeURIComponent(u),"&token=").concat(encodeURIComponent(o||"")),t.prev=9,t.next=12,fetch(s);case 12:if((f=t.sent).ok){t.next=15;break}return t.abrupt("return",[["API Error ".concat(f.status)]]);case 15:return t.next=17,f.json();case 17:for(l=t.sent,h=[],p=a.flat(),y=0;y<p.length;y++)v=p[y],d=l[v],(y!==p.length-1||null!=d&&""!==d)&&h.push(null!=d?d:"Unknown");return t.abrupt("return",[h]);case 24:return t.prev=24,t.t0=t.catch(9),t.abrupt("return",[["Request Failed"]]);case 27:case"end":return t.stop()}}),t,null,[[9,24]])}))),i.apply(this,arguments)}CustomFunctions.associate("TICKER",(function(t){return o.apply(this,arguments)})),CustomFunctions.associate("ISIN",(function(t){return i.apply(this,arguments)}))}();
-//# sourceMappingURL=functions.js.map
+/* MXChange custom functions — Version 1.3.3
+ * MX.TICKER(ticker, fields...)  MX.ISIN(isin, fields...)  MX.FIELDS()
+ * Tickers are exchange-suffixed (ASML, ASML.AS) so a ticker matches one listing.
+ * An ISIN names the security, not the listing, so MX.ISIN returns ONE ROW PER
+ * LISTING — add "ticker" or "Market" to the fields to see which row is which.
+ * All work shares three workers. Deadlines include headers and JSON response bodies.
+ */
+/* global CustomFunctions, OfficeRuntime */
+(function () {
+  "use strict";
+  const API_BASE = "https://muslimxchange.com/wp-json/mx-api/v1";
+  const DEFAULT_BATCH_MAX = 1000, FLUSH_MS = 80, TIMEOUT_MS = 20000, PARALLEL = 3;
+  const STORAGE_SESSION = "mx_session_v2", STORAGE_AUTH = "mx_auth", STORAGE_BATCH = "mx_batch_max";
+  let queue = [], timer = null, active = 0;
+  const jobs = [];
+
+  async function readStorage(key) {
+    try { return await OfficeRuntime.storage.getItem(key); } catch (e) { return null; }
+  }
+  async function readSession() {
+    // A tombstone takes precedence over legacy credentials, even if removal failed.
+    try {
+      const raw = await OfficeRuntime.storage.getItem(STORAGE_SESSION);
+      if (raw !== null && raw !== undefined) {
+        const session = JSON.parse(raw);
+        return session && session.id && session.auth ? session : null;
+      }
+      const auth = await OfficeRuntime.storage.getItem(STORAGE_AUTH);
+      return auth ? {id: "legacy:" + auth, auth: auth} : null;
+    } catch (e) { return null; }
+  }
+  async function isCurrent(session) {
+    const now = await readSession();
+    return !!(session && now && now.id === session.id && now.auth === session.auth);
+  }
+  function makeError(kind, message) {
+    if (typeof CustomFunctions !== "undefined" && CustomFunctions.Error && CustomFunctions.ErrorCode) {
+      return new CustomFunctions.Error(kind === "notAvailable" ? CustomFunctions.ErrorCode.notAvailable : CustomFunctions.ErrorCode.invalidValue, message);
+    }
+    return [[message]];
+  }
+  function signedOut() { return makeError("invalidValue", "Session changed — sign in and recalculate from the MXChange task pane"); }
+  function normalizeFields(args) {
+    const out = [];
+    (function walk(v) {
+      if (v === null || v === undefined) return;
+      if (Array.isArray(v)) { v.forEach(walk); return; }
+      String(v).split(",").forEach(function (s) { s = s.trim(); if (s && out.indexOf(s) < 0) out.push(s); });
+    })(args);
+    return out.length ? out : ["Result"];
+  }
+  function statusMessage(status, data) {
+    if (status === 401) return "Sign in again from the MXChange task pane";
+    if (status === 403) return (data && data.code === "mx_api_field_restricted") ? "Field not in your plan — see MX.FIELDS()" : ((data && data.message) || "Your membership does not include API access");
+    if (status === 429) return (data && data.code === "mx_api_quota_exceeded") ? (data.message || "Daily quota reached") : "Rate limit reached — recalculate in a minute";
+    if (status === 503) return "Data service temporarily unavailable — recalculate shortly";
+    return (data && data.message) || ("API error " + status);
+  }
+  async function fetchJson(url, opts) {
+    const ctrl = typeof AbortController === "undefined" ? null : new AbortController();
+    let deadline;
+    const timeout = new Promise(function (_, reject) {
+      deadline = setTimeout(function () {
+        const error = new Error("Request timed out"); error.name = "TimeoutError";
+        reject(error);
+        if (ctrl) ctrl.abort();
+      }, TIMEOUT_MS);
+    });
+    const work = (async function () {
+      const res = await fetch(url, Object.assign({}, opts, ctrl ? {signal: ctrl.signal} : {}));
+      const data = await res.json();
+      return {res: res, data: data};
+    })();
+    try { return await Promise.race([work, timeout]); }
+    finally { clearTimeout(deadline); }
+  }
+  function networkError(e) {
+    return e && (e.name === "TimeoutError" || e.name === "AbortError") ? "Request timed out — recalculate to retry" : "Request failed — check your connection or try again";
+  }
+  function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+
+  // One pool for every flush and MX.FIELDS call, including retries and split batches.
+  function schedule(work) {
+    return new Promise(function (resolve, reject) { jobs.push({work: work, resolve: resolve, reject: reject}); pump(); });
+  }
+  function pump() {
+    while (active < PARALLEL && jobs.length) {
+      const job = jobs.shift(); active++;
+      Promise.resolve().then(job.work).then(job.resolve, job.reject).finally(function () { active--; pump(); });
+    }
+  }
+  function enqueue(kind, id, fields) {
+    id = String(id === null || id === undefined ? "" : id).trim().toUpperCase();
+    if (!id) return Promise.resolve(makeError("invalidValue", "Identifier is empty"));
+    return new Promise(function (resolve) {
+      queue.push({kind: kind, id: id, fields: fields, resolve: resolve});
+      if (!timer) timer = setTimeout(flush, FLUSH_MS);
+    });
+  }
+  function groupItems(items, max) {
+    const groups = [];
+    let g = null;
+    items.forEach(function (it) {
+      const key = it.kind + ":" + it.id;
+      if (!g || (!g.ids.has(key) && g.ids.size >= max)) {
+        g = {ids: new Set(), fields: new Set(), items: []};
+        groups.push(g);
+      }
+      g.ids.add(key); it.fields.forEach(function (f) { g.fields.add(f); }); g.items.push(it);
+    });
+    return groups;
+  }
+  function resolveAll(items, result) { items.forEach(function (it) { it.resolve(result); }); }
+  async function post(body, session) {
+    for (let attempt = 0; attempt < 2; attempt++) {
+      if (!(await isCurrent(session))) return {cancelled: true};
+      let r;
+      try {
+        r = await fetchJson(API_BASE + "/batch", {
+          method: "POST", headers: {"Content-Type": "application/json", Authorization: session.auth}, body: JSON.stringify(body)
+        });
+      } catch (e) { return {error: networkError(e)}; }
+      if (!(await isCurrent(session))) return {cancelled: true};
+      if (r.res.status === 429 && attempt === 0) {
+        const wait = parseInt(r.res.headers.get("Retry-After") || "0", 10);
+        if (wait > 0 && wait <= 10) { await sleep(wait * 1000); continue; }
+      }
+      return r;
+    }
+  }
+  async function runGroup(group, depth, session) {
+    const body = {tickers: [], isins: [], fields: Array.from(group.fields)};
+    group.ids.forEach(function (key) { const i = key.indexOf(":"); body[key.slice(0, i)].push(key.slice(i + 1)); });
+    const r = await post(body, session);
+    if (r.cancelled) { resolveAll(group.items, signedOut()); return; }
+    if (r.error) { resolveAll(group.items, makeError("notAvailable", r.error)); return; }
+    const res = r.res, data = r.data;
+    if (!res.ok) {
+      if (res.status === 400 && data && data.code === "mx_api_batch_too_large" && depth < 1) {
+        const limit = Math.max(1, parseInt(data.data && data.data.batch_max, 10) || Math.floor(group.ids.size / 2));
+        try { await OfficeRuntime.storage.setItem(STORAGE_BATCH, String(limit)); } catch (e) { /* best effort */ }
+        for (const subgroup of groupItems(group.items, limit)) await runGroup(subgroup, depth + 1, session);
+        return;
+      }
+      resolveAll(group.items, makeError("invalidValue", statusMessage(res.status, data))); return;
+    }
+    if (!data || !Array.isArray(data.fields) || !data.results) {
+      resolveAll(group.items, makeError("notAvailable", "Invalid API response — recalculate to retry")); return;
+    }
+    const canonical = data.fields, invalid = data.invalid_fields || [], restricted = data.restricted_fields || [];
+    function cells(row, fields) {
+      return fields.map(function (f) {
+        const canon = canonical.find(function (c) { return c.toLowerCase() === f.toLowerCase(); });
+        if (!canon) {
+          if (restricted.some(function (r) { return r.toLowerCase() === f.toLowerCase(); })) return "Not in your plan: " + f;
+          return invalid.indexOf(f) >= 0 ? "Invalid field: " + f : "";
+        }
+        return row[canon] === null || row[canon] === undefined ? "" : row[canon];
+      });
+    }
+    group.items.forEach(function (it) {
+      const bucket = data.results[it.kind], row = bucket ? bucket[it.id] : undefined;
+      if (row === null || row === undefined) { it.resolve(makeError("notAvailable", it.id + " not found")); return; }
+      // Several listings (an ISIN listed on more than one exchange): one row per listing, spilled down.
+      const listings = row.ambiguous && Array.isArray(row.alternatives) && row.alternatives.length > 1 ? row.alternatives : [row];
+      it.resolve(listings.map(function (r) { return cells(r, it.fields); }));
+    });
+  }
+  async function flush() {
+    timer = null;
+    const items = queue; queue = [];
+    if (!items.length) return;
+    const session = await readSession();
+    if (!session) { resolveAll(items, signedOut()); return; }
+    const stored = parseInt(await readStorage(STORAGE_BATCH), 10);
+    const groups = groupItems(items, stored > 0 ? stored : DEFAULT_BATCH_MAX);
+    await Promise.all(groups.map(function (g) {
+      return schedule(function () { return runGroup(g, 0, session); }).catch(function (e) { resolveAll(g.items, makeError("notAvailable", networkError(e))); });
+    }));
+  }
+  function TICKER(ticker, ...fields) { return enqueue("tickers", ticker, normalizeFields(fields)); }
+  function ISIN(isin, ...fields) { return enqueue("isins", isin, normalizeFields(fields)); }
+  async function FIELDS() {
+    const session = await readSession();
+    if (!session) return signedOut();
+    return schedule(async function () {
+      if (!(await isCurrent(session))) return signedOut();
+      try {
+        const r = await fetchJson(API_BASE + "/fields", {headers: {Authorization: session.auth}});
+        if (!(await isCurrent(session))) return signedOut();
+        if (!r.res.ok) return makeError("invalidValue", statusMessage(r.res.status, r.data));
+        const rows = ((r.data && r.data.fields) || []).map(function (f) { return [f.name, f.type, f.tier || "", f.available === false ? "not in your plan" : "yes"]; });
+        return rows.length ? rows : makeError("notAvailable", "No fields returned");
+      } catch (e) { return makeError("notAvailable", networkError(e)); }
+    });
+  }
+  CustomFunctions.associate("TICKER", TICKER);
+  CustomFunctions.associate("ISIN", ISIN);
+  CustomFunctions.associate("FIELDS", FIELDS);
+})();

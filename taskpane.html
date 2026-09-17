@@ -1,1 +1,51 @@
-<!doctype html><html><head><meta charset="UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=Edge"/><meta name="viewport" content="width=device-width,initial-scale=1"><title>Muslim Xchange – Halal Stock Compliance Add-in for Excel</title><script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script><link rel="stylesheet" href="https://res-1.cdn.office.net/files/fabric-cdn-prod_20230815.002/office-ui-fabric-core/11.1.0/css/fabric.min.css"/><link href="36640f9436c8282d8333.css" rel="stylesheet"/><script defer="defer" src="polyfill.js"></script><script defer="defer" src="taskpane.js"></script></head><body class="ms-font-m ms-welcome ms-Fabric"><header class="ms-welcome__header ms-bgColor-neutralLighter"><img width="100" src="assets/logo.png" alt="Muslim Xhange" title="Muslim Xchange"/></header><section id="sideload-msg" class="ms-welcome__main"><h2 class="ms-font-xl">Please <a target="_blank" href="https://learn.microsoft.com/office/dev/add-ins/testing/test-debug-office-add-ins#sideload-an-office-add-in-for-testing">sideload</a> your add-in to see app body.</h2></section><main id="app-body" class="ms-welcome__main" style="display:none"><div id="login-section"><p>Bring powerful Shariah compliance data, purification amounts, and zakat calculations directly into your Excel spreadsheets.</p><h2>Please login to your account</h2><label>Username:</label><br/><input id="username"/><br/><label>Password:</label><br/><input type="password" id="password"/><br/><button id="login-btn" style="margin:15px 0">Login</button><p>Don't have an account? <a href="https://muslimxchange.com/choose-membership/">Sign Up</a></p></div><div id="login-status" style="margin:10px 0"></div><button id="logout-btn">Logout</button><hr/><div id="api-response" style="margin-top:10px"></div></main></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MXChange for Excel</title>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <link rel="stylesheet" href="taskpane.css" />
+  <script defer src="taskpane.js"></script>
+</head>
+<body>
+  <header class="head">
+    <img src="assets/logo.png" width="96" height="27" alt="Muslim Xchange" />
+  </header>
+
+  <main class="pane">
+    <p class="lede">Shariah compliance, purification and zakat figures for stocks and ETFs, as spreadsheet formulas.</p>
+
+    <section id="form">
+      <h1>Sign in</h1>
+      <label for="username">Username or email</label>
+      <input id="username" type="text" autocomplete="username" spellcheck="false" />
+      <label for="key">API key</label>
+      <input id="key" type="password" autocomplete="off" spellcheck="false" />
+      <p class="hint">Not your account password. Create or reset your key on the <a href="https://muslimxchange.com/api-keys/" target="_blank" rel="noopener">API keys page</a> and paste it here.</p>
+      <button id="sign-in" type="button" class="primary">Sign in</button>
+      <p class="hint">No account? <a href="https://muslimxchange.com/choose-membership/" target="_blank" rel="noopener">Choose a membership</a>.</p>
+    </section>
+
+    <section id="session" hidden>
+      <h1>Signed in as <span id="who"></span></h1>
+      <p id="tier" class="tier"></p>
+      <div class="row">
+        <button id="recalc" type="button" class="primary">Recalculate workbook</button>
+        <button id="sign-out" type="button">Sign out</button>
+      </div>
+      <h2>Formulas</h2>
+      <table class="ref">
+        <tr><td><code>=MX.TICKER("AAPL")</code></td><td>Overall result</td></tr>
+        <tr><td><code>=MX.TICKER("AAPL","AAOIFI","Purification")</code></td><td>Several fields, spilled across the row</td></tr>
+        <tr><td><code>=MX.TICKER(A2,$B$1:$E$1)</code></td><td>Field names from a header range</td></tr>
+        <tr><td><code>=MX.ISIN("US0378331005","Result")</code></td><td>Lookup by ISIN</td></tr>
+        <tr><td><code>=MX.ISIN("NL0010273215","ticker","Result")</code></td><td>An ISIN listed on several exchanges spills one row per listing</td></tr>
+        <tr><td><code>=MX.FIELDS()</code></td><td>Every field name and its type</td></tr>
+      </table>
+    </section>
+
+    <p id="note" class="note"></p>
+  </main>
+</body>
+</html>

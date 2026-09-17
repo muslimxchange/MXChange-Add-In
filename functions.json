@@ -1,47 +1,63 @@
 {
-    "allowCustomDataForDataTypeAny": true,
-    "functions": [
+  "allowCustomDataForDataTypeAny": true,
+  "functions": [
+    {
+      "id": "TICKER",
+      "name": "TICKER",
+      "description": "Shariah compliance data for an exchange-suffixed ticker (ASML, ASML.AS). Fields default to Result; use MX.FIELDS() to list them.",
+      "helpUrl": "https://muslimxchange.com/excel-addin/",
+      "parameters": [
         {
-            "description": "Fetch Shariah compliance data using a stock ticker symbol.",
-            "helpUrl": "https://muslimxchange.com/excel-addin/",
-            "id": "TICKER",
-            "name": "TICKER",
-            "parameters": [
-                {
-                    "name": "ticker",
-                    "type": "string"
-                },
-                {
-                    "name": "fields",
-                    "optional": true,
-                    "repeating": true,
-                    "type": "string"
-                }
-            ],
-            "result": {
-                "dimensionality": "matrix"
-            }
+          "name": "ticker",
+          "description": "Ticker symbol, e.g. AAPL",
+          "type": "string"
         },
         {
-            "description": "Fetch Shariah compliance data using an ISIN (International Securities Identification Number).",
-            "helpUrl": "https://muslimxchange.com/excel-addin/",
-            "id": "ISIN",
-            "name": "ISIN",
-            "parameters": [
-                {
-                    "name": "ISIN",
-                    "type": "any"
-                },
-                {
-                    "name": "fields",
-                    "optional": true,
-                    "repeating": true,
-                    "type": "string"
-                }
-            ],
-            "result": {
-                "dimensionality": "matrix"
-            }
+          "name": "fields",
+          "description": "Field name(s): \"Result\", \"AAOIFI\", \"Purification\"… or a range of names",
+          "type": "any",
+          "dimensionality": "matrix",
+          "optional": true,
+          "repeating": true
         }
-    ]
+      ],
+      "result": {
+        "dimensionality": "matrix"
+      }
+    },
+    {
+      "id": "ISIN",
+      "name": "ISIN",
+      "description": "Shariah compliance data for an ISIN. An ISIN listed on several exchanges returns one row per listing — add \"ticker\" or \"Market\" to the fields to tell them apart. Fields default to Result.",
+      "helpUrl": "https://muslimxchange.com/excel-addin/",
+      "parameters": [
+        {
+          "name": "isin",
+          "description": "ISIN, e.g. US0378331005",
+          "type": "any"
+        },
+        {
+          "name": "fields",
+          "description": "Field name(s) or a range of names",
+          "type": "any",
+          "dimensionality": "matrix",
+          "optional": true,
+          "repeating": true
+        }
+      ],
+      "result": {
+        "dimensionality": "matrix"
+      }
+    },
+    {
+      "id": "FIELDS",
+      "name": "FIELDS",
+      "description": "Lists every field name for MX.TICKER and MX.ISIN with its type, tier (basic/full) and whether your plan includes it.",
+      "helpUrl": "https://muslimxchange.com/excel-addin/",
+      "parameters": [],
+      "result": {
+        "dimensionality": "matrix"
+      }
+    }
+  ]
 }
