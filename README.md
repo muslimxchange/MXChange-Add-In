@@ -1,4 +1,4 @@
-# MXChange add-in 1.3.3
+# MXChange add-in 1.3.4
 
 Requires MX API 1.9.0. Publish these files to the root of the `MXChange-Add-In` GitHub Pages repo and reload the 1.3.1.0 manifest in Excel. The manifest GUID and the `MX.TICKER`, `MX.ISIN` and `MX.FIELDS` signatures are unchanged; the `MX.TICKERIN` / `MX.ISININ` functions from the unreleased 1.3.0 are not published.
 
@@ -8,3 +8,4 @@ Requires MX API 1.9.0. Publish these files to the root of the `MXChange-Add-In` 
 - Sign-out invalidates retries and stale results; credentials are stored in `mx_session_v2`, and a sign-out marker overrides any legacy `mx_auth`.
 - Fields outside your plan show `Not in your plan: <field>` in that cell; `MX.FIELDS()` now lists tier and availability per field. Trial accounts see their daily allowance in the task pane.
 - The server has no batch cap; the add-in sends up to 1,000 identifiers per request so responses stay quick.
+- 1.3.4: fixes `Invalid field: [object Object]` spilling next to results — Excel appends an Invocation object after the repeating `fields` array; it is now ignored.

@@ -1,4 +1,4 @@
-/* MXChange custom functions — Version 1.3.3
+/* MXChange custom functions — Version 1.3.4
  * MX.TICKER(ticker, fields...)  MX.ISIN(isin, fields...)  MX.FIELDS()
  * Tickers are exchange-suffixed (ASML, ASML.AS) so a ticker matches one listing.
  * An ISIN names the security, not the listing, so MX.ISIN returns ONE ROW PER
@@ -45,6 +45,7 @@
     (function walk(v) {
       if (v === null || v === undefined) return;
       if (Array.isArray(v)) { v.forEach(walk); return; }
+      if (typeof v === "object") return; // Excel's Invocation object (appended after the fields array) — never a field name
       String(v).split(",").forEach(function (s) { s = s.trim(); if (s && out.indexOf(s) < 0) out.push(s); });
     })(args);
     return out.length ? out : ["Result"];
@@ -178,8 +179,9 @@
       return schedule(function () { return runGroup(g, 0, session); }).catch(function (e) { resolveAll(g.items, makeError("notAvailable", networkError(e))); });
     }));
   }
-  function TICKER(ticker, ...fields) { return enqueue("tickers", ticker, normalizeFields(fields)); }
-  function ISIN(isin, ...fields) { return enqueue("isins", isin, normalizeFields(fields)); }
+  // Excel passes a repeating parameter as ONE array, then its Invocation object as an extra last argument.
+  function TICKER(ticker, fields) { return enqueue("tickers", ticker, normalizeFields(fields)); }
+  function ISIN(isin, fields) { return enqueue("isins", isin, normalizeFields(fields)); }
   async function FIELDS() {
     const session = await readSession();
     if (!session) return signedOut();

@@ -1,4 +1,4 @@
-/* MXChange task pane — Version 1.3.3. Credentials are committed as one session record.
+/* MXChange task pane — Version 1.3.4. Credentials are committed as one session record.
  * Restore never writes credentials; stale responses cannot undo sign-out or account changes.
  */
 /* global Office, Excel, OfficeRuntime, document */
